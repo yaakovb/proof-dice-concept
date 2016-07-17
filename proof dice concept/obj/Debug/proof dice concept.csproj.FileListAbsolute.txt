@@ -1,0 +1,6 @@
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\bin\Debug\proof dice concept.exe.config
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\obj\Debug\proof dice concept.csprojResolveAssemblyReference.cache
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\bin\Debug\proof dice concept.exe
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\bin\Debug\proof dice concept.pdb
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\obj\Debug\proof dice concept.exe
+C:\Users\Shani\Documents\yaakov\proof dice concept\proof dice concept\obj\Debug\proof dice concept.pdb
