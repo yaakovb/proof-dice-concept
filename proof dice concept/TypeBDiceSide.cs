@@ -8,27 +8,34 @@ namespace proof_dice_concept
 {
     class TypeBDiceSide : BasicDiceSide
     {
-        public int interactWithTypeADice(int otherDiceVal)
+        public TypeBDiceSide(int val) : base(val) { }
+
+        public override int InteractWithOtherDice(BasicDiceSide otherDiceSide)
+        {
+            return -1 * otherDiceSide.InteractWithTypeBDice(M_val);
+        }
+
+        public override int InteractWithTypeADice(int otherDiceVal)
         {
             return -1;
         }
 
-        public int interactWithTypeBDice(int otherDiceVal)
+        public override int InteractWithTypeBDice(int otherDiceVal)
         {
             return M_val.CompareTo(otherDiceVal);
         }
 
-        public int interactWithTypeCDice(int otherDiceVal)
+        public override int InteractWithTypeCDice(int otherDiceVal)
         {
             return 1;
         }
 
-        public abstract int interactWithTypeDDice(int otherDiceVal)
+        public override int InteractWithTypeDDice(int otherDiceVal)
         {
             return M_val.CompareTo(otherDiceVal);
         }
 
-        public abstract int interactWithTypeEDice(int otherDiceVal)
+        public override int InteractWithTypeEDice(int otherDiceVal)
         {
             return M_val.CompareTo(otherDiceVal);
         }

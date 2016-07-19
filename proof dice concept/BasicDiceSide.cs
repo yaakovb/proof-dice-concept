@@ -9,7 +9,7 @@ namespace proof_dice_concept
     abstract class BasicDiceSide
     {
         private int m_val;
-        public int M_val{ get; }
+        public int M_val { get { return m_val; } }
         public string M_type
         {
             get
@@ -17,16 +17,16 @@ namespace proof_dice_concept
                 return this.GetType().ToString();
             }
         }
-
-        public int interactWithOtherDice(BasicDiceSide otherDiceSide)
+        public BasicDiceSide(int val)
         {
-            return -1 * otherDiceSide.interactWithTypeADice(M_val);
+            m_val = val;
         }
 
-        public abstract int interactWithTypeADice(int otherDiceVal);
-        public abstract int interactWithTypeBDice(int otherDiceVal);
-        public abstract int interactWithTypeCDice(int otherDiceVal);
-        public abstract int interactWithTypeDDice(int otherDiceVal);
-        public abstract int interactWithTypeEDice(int otherDiceVal);
+        public abstract int InteractWithOtherDice(BasicDiceSide otherDiceSide);
+        public abstract int InteractWithTypeADice(int otherDiceVal);
+        public abstract int InteractWithTypeBDice(int otherDiceVal);
+        public abstract int InteractWithTypeCDice(int otherDiceVal);
+        public abstract int InteractWithTypeDDice(int otherDiceVal);
+        public abstract int InteractWithTypeEDice(int otherDiceVal);
     }
 }

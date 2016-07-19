@@ -27,7 +27,5 @@ namespace proof_dice_concept
         {
             return diceRoll[index];
         }
-
-        public
     }
 }
