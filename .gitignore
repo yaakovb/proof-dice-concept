@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+proof dice concept.v12.suo
+*.exe
+proof dice concept/bin/Debug/tmp.txt
+*.pdb
+proof dice concept/bin/Debug/proof dice concept.pdb
+*.exe
+proof dice concept/bin/Debug/proof dice concept.pdb
