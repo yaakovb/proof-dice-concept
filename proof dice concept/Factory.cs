@@ -9,7 +9,7 @@ namespace proof_dice_concept
     enum DiceTypes { TypeA, TypeB, TypeC, TypeD, TypeE }
     class Factory
     {
-        public BasicDiceSide CreateDiceSide(int val, DiceTypes dieType)
+        static public BasicDiceSide CreateDiceSide(int val, DiceTypes dieType)
         {
             BasicDiceSide retVal;
             switch (dieType)

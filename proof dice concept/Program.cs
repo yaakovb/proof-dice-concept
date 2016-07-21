@@ -11,6 +11,7 @@ namespace proof_dice_concept
     {
         static void Main(string[] args)
         {
+            Statiscs.CreateStatiscsIntoFile();
         }
     }
 }
