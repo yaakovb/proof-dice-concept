@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace proof_dice_concept
 {
@@ -11,7 +12,9 @@ namespace proof_dice_concept
     {
         static void Main(string[] args)
         {
-            Statiscs.CreateStatiscsIntoFile();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

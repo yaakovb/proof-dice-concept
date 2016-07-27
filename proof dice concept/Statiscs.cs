@@ -33,7 +33,7 @@ namespace proof_dice_concept
 
         static public void CreateStatiscsIntoFile()
         {
-            string outputFormat = "Type A vs {0} stats:\nlosses - {1}   draws - {2}   wins- {3}\n\n";
+            string outputFormat = "SHANI IS THE HOTTEST !! EVER!!!!!!!!!!! Type A vs {0} stats:\nlosses - {1}   draws - {2}   wins- {3}\n\n";
             int[] retVal = GetDiceTypeCompersionStatisics(DiceTypes.TypeA, DiceTypes.TypeA);
             File.AppendAllText("tmp.txt", string.Format(outputFormat, "Type A", retVal[0], retVal[1], retVal[2]));
             retVal = GetDiceTypeCompersionStatisics(DiceTypes.TypeA, DiceTypes.TypeB);
