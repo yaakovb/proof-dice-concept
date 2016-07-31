@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace proof_dice_concept
 {
-    enum DiceTypes { TypeA, TypeB, TypeC, TypeD, TypeE }
+    enum DiceTypes { TypeA = 0, TypeB = 1, TypeC = 2, TypeD = 3, TypeE = 4}
     class Factory
     {
         static public BasicDiceSide CreateDiceSide(int val, DiceTypes dieType)

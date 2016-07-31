@@ -14,17 +14,23 @@ namespace proof_dice_concept
     {
         Button[] btnList;
         Image[] imgList;
-        PictureBox[] myChosendice;
+        PictureBox[] myChosenDice;
+        PictureBox[] enemyChosenDice;
         bool useFirst;
 
         public Form1()
         {
             InitializeComponent();
             useFirst = true;
-
             btnList = new Button[5];
             imgList = new Image[5];
-            myChosendice = new PictureBox[2];
+            myChosenDice = new PictureBox[2];
+            enemyChosenDice = new PictureBox[2];
+
+            Button spinButton = new Button();
+            spinButton.Location = new Point(150, 85);
+            spinButton.Text = "SPIN";
+            this.Controls.Add(spinButton);
 
             for (int i = 0; i < 5; i++)
             {
@@ -48,7 +54,17 @@ namespace proof_dice_concept
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 pb.Location = new Point(120 + i *70, 15);
                 pb.Visible = false;
-                myChosendice[i] = pb;
+                pb.BackColor = Color.Azure;
+                myChosenDice[i] = pb;
+                this.Controls.Add(pb);
+
+                pb = new PictureBox();
+                pb.Size = new Size(60, 60);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Location = new Point(120 + i * 70, 115);
+                pb.Image = imgList[i];
+                pb.BackColor = Color.LightPink;
+                enemyChosenDice[i] = pb;
                 this.Controls.Add(pb);
             }
 
@@ -59,9 +75,14 @@ namespace proof_dice_concept
             int a = useFirst ? 0 : 1;
             Button btn = (Button) sender;
             int b = Convert.ToInt16(btn.Name);
-            myChosendice[a].Image = imgList[b];
-            myChosendice[a].Visible = true;
+            myChosenDice[a].Image = imgList[b];
+            myChosenDice[a].Visible = true;
             useFirst = !useFirst;
+        }
+
+        private void Spin_Click(object sender, System.EventArgs e)
+        {
+            
         }
     }
 }

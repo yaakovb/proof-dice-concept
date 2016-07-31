@@ -8,9 +8,15 @@ namespace proof_dice_concept
 {
     class GameLogic
     {
-        public void GameRound()
+        public int[] GetSpin(int diceType)
         {
+            int[] result = new int[2] { 0, 0 };
+            Dice d = new Dice();
+            d.Init((DiceTypes)diceType);
+            BasicDiceSide roll = d.DiceRoll;
+            result[0] = 
 
+            return result;
         }
     }
 }
