@@ -10,12 +10,9 @@ namespace proof_dice_concept
     {
         private int m_val;
         public int M_val { get { return m_val; } }
-        public string M_type
+        public abstract DiceTypes M_type
         {
-            get
-            {
-                return this.GetType().ToString();
-            }
+            get;
         }
         public BasicDiceSide(int val)
         {

@@ -14,8 +14,8 @@ namespace proof_dice_concept
             Dice d = new Dice();
             d.Init((DiceTypes)diceType);
             BasicDiceSide roll = d.DiceRoll;
-            result[0] = 
-
+            result[0] = (int)roll.M_type;
+            result[1] = roll.M_val;
             return result;
         }
     }

@@ -10,6 +10,11 @@ namespace proof_dice_concept
     {
         public TypeADiceSide(int val) : base(val) { }
 
+        public override DiceTypes M_type
+        {
+            get { return DiceTypes.TypeA; }
+        }
+
         public override int InteractWithOtherDice(BasicDiceSide otherDiceSide)
         {
             return -1 * otherDiceSide.InteractWithTypeADice(M_val);
