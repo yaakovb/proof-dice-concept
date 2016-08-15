@@ -17,7 +17,7 @@ namespace proof_dice_concept
         PictureBox[] myChosenDice;
         PictureBox[] enemyChosenDice;
         bool useFirst;
-        Round round = new Round();
+        Round round;
 
         public Form1()
         {
@@ -27,6 +27,7 @@ namespace proof_dice_concept
             imgList = new Image[5];
             myChosenDice = new PictureBox[2];
             enemyChosenDice = new PictureBox[2];
+            round = new Round();
 
             Button spinButton = new Button();
             spinButton.Location = new Point(150, 85);
@@ -67,6 +68,7 @@ namespace proof_dice_concept
                 pb.BackColor = Color.LightPink;
                 enemyChosenDice[i] = pb;
                 this.Controls.Add(pb);
+                round.SetDice(false, i, i);
             }
 
         }
@@ -79,10 +81,12 @@ namespace proof_dice_concept
             myChosenDice[a].Image = imgList[b];
             myChosenDice[a].Visible = true;
             useFirst = !useFirst;
+            round.SetDice(true, a, b);
         }
 
         private void Spin_Click(object sender, System.EventArgs e)
         {
+            round.Spin();
             
         }
     }
