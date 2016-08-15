@@ -17,6 +17,7 @@ namespace proof_dice_concept
         PictureBox[] myChosenDice;
         PictureBox[] enemyChosenDice;
         bool useFirst;
+        Round round = new Round();
 
         public Form1()
         {
