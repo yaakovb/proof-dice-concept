@@ -13,11 +13,15 @@ namespace proof_dice_concept
     public partial class Form1 : Form
     {
         Button[] btnList;
+        Button spinButton;
+        Button switchButton;
+        Button fightButton;
         Image[] imgList;
         PictureBox[] myChosenDice;
         PictureBox[] enemyChosenDice;
         bool useFirst;
         Round round;
+        bool isForcedFight;
 
         public Form1()
         {
@@ -28,10 +32,12 @@ namespace proof_dice_concept
             myChosenDice = new PictureBox[2];
             enemyChosenDice = new PictureBox[2];
             round = new Round();
+            isForcedFight  = true;
 
-            Button spinButton = new Button();
+            spinButton = new Button();
             spinButton.Location = new Point(150, 85);
             spinButton.Text = "SPIN";
+            spinButton.Click += new EventHandler(this.Spin_Click);
             this.Controls.Add(spinButton);
 
             for (int i = 0; i < 5; i++)
@@ -87,6 +93,9 @@ namespace proof_dice_concept
         private void Spin_Click(object sender, System.EventArgs e)
         {
             round.Spin();
+            isForcedFight = round.IsCrossedForcedOutCome() ||  IsStraightForcedOutCome();
+            switchButton.Visible = !isForcedFight;
+            fightButton.Visible = true;
             
         }
     }
