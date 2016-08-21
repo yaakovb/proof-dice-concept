@@ -22,6 +22,10 @@ namespace proof_dice_concept
         bool useFirst;
         Round round;
         bool isForcedFight;
+        PictureBox[] playerDice1Outcome;
+        PictureBox[] playerDice2Outcome;
+        PictureBox[] enemyDice1Outcome;
+        PictureBox[] enemyDice2Outcome;
 
         public Form1()
         {
@@ -76,6 +80,15 @@ namespace proof_dice_concept
                 this.Controls.Add(pb);
                 round.SetDice(false, i, i);
             }
+            
+           for (int i = 0; i < 6; i++)
+           {
+           	pictureBox pb = new PictureBox();
+	          pb.Size = new Size(30, 30);
+	          pb.SizeMode = PictureBoxSizeMode.StretchImage;
+	          pb.Location = new Point(10 + 30 * i, 200);
+	          
+           }
 
         }
 
