@@ -83,11 +83,10 @@ namespace proof_dice_concept
             
            for (int i = 0; i < 6; i++)
            {
-           	pictureBox pb = new PictureBox();
-	          pb.Size = new Size(30, 30);
-	          pb.SizeMode = PictureBoxSizeMode.StretchImage;
-	          pb.Location = new Point(10 + 30 * i, 200);
-	          
+               PictureBox pb = new PictureBox();
+               pb.Size = new Size(30, 30);
+               pb.SizeMode = PictureBoxSizeMode.StretchImage;
+               pb.Location = new Point(10 + 30 * i, 200);
            }
 
         }
@@ -106,7 +105,7 @@ namespace proof_dice_concept
         private void Spin_Click(object sender, System.EventArgs e)
         {
             round.Spin();
-            isForcedFight = round.IsCrossedForcedOutCome() ||  IsStraightForcedOutCome();
+            isForcedFight = round.IsCrossedForcedOutCome() || round.IsStraightForcedOutCome();
             switchButton.Visible = !isForcedFight;
             fightButton.Visible = true;
             
